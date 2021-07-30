@@ -54,10 +54,10 @@ cat ../.bash_profile >>~/.bash_profile
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
-echo "" >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "##### MAKE ZSH DEFAULT ##### " >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "" >>~/.bashrc
-echo "zsh" >>~/.bashrc
-source ~/.bashrc
+# echo "" >>~/.bashrc
+# echo "############################" >>~/.bashrc
+# echo "##### MAKE ZSH DEFAULT ##### " >>~/.bashrc
+# echo "############################" >>~/.bashrc
+# echo "" >>~/.bashrc
+# echo "zsh" >>~/.bashrc
+# source ~/.bashrc
