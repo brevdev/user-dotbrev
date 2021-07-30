@@ -28,7 +28,7 @@ cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 sudo apt-get install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Copying your ZSH Settings
-echo $"\n" >>~/.zshrc
+echo "" >>~/.zshrc
 cat ../.zshrc >>~/.zshrc
 source ~/.zshrc
 
@@ -37,15 +37,15 @@ source ~/.zshrc
 if [ ! -f "~/.bash_profile" ]; then
   touch ~/.bash_profile
 fi
-echo $"\n" >>~/.bash_profile
+echo "" >>~/.bash_profile
 cat ../.bash_profile >>~/.bash_profile
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
-echo $"\n" >>~/.bashrc
+echo "" >>~/.bashrc
 echo "############################" >>~/.bashrc
 echo "##### MAKE ZSH DEFAULT ##### " >>~/.bashrc
 echo "############################" >>~/.bashrc
-echo $"\n" >>~/.bashrc
+echo "" >>~/.bashrc
 echo "zsh" >>~/.bashrc
 source ~/.bashrc
