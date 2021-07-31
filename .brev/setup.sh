@@ -41,7 +41,7 @@ sudo apt-get install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Copying your ZSH Settings
 echo "" >>~/.zshrc
-cat ../.zshrc >>~/.zshrc
+cat .zshrc >>~/.zshrc
 source ~/.zshrc
 
 ##### BASH #####
@@ -50,7 +50,7 @@ if [ ! -f "~/.bash_profile" ]; then
   touch ~/.bash_profile
 fi
 echo "" >>~/.bash_profile
-cat ../.bash_profile >>~/.bash_profile
+cat .bash_profile >>~/.bash_profile
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
