@@ -42,6 +42,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Copying your ZSH Settings
 echo "" >>~/.zshrc
 cat .zshrc >>~/.zshrc
+mv ./.brev/utils ../.brev/
 source ~/.zshrc
 
 ##### BASH #####
@@ -51,6 +52,7 @@ if [ ! -f "~/.bash_profile" ]; then
 fi
 echo "" >>~/.bash_profile
 cat .bash_profile >>~/.bash_profile
+mv ./.brev/utils ../.brev/
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
