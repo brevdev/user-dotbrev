@@ -6,25 +6,20 @@ Fork and modify this template to add your own custom settings.
 
 ## Setup Steps
 
-### VSCode Settings and Extensions
-#### 1. Replace `.vscode/settings.json` with your personal VSCode `settings.json`.
->To locate your personal VSCode `settings.json`, first open VSCode. Then click Cmd+Shft+P (Ctrl+Shft+P for Windows) and type `>Preferences: Open Settings (JSON)`.
+### 1. VSCode Settings
+A. Replace `.vscode/settings.json` with your personal VSCode `settings.json`.
+>To locate your personal VSCode `settings.json`, first open VSCode. Then click Cmd+Shft+P (Ctrl+Shft+P for Windows) and type `Preferences: Open Settings (JSON)`.
 
-#### 2. Open `.brev/setup.sh` and add your VSCode extensions.
->To find an extension id, go to the extensions tab of your VSCode. Click the settings icon on the bottom right of the extension card, then select `Copy Extension ID`. You can also locate the extension id by clicking on the extension card and looking to the right of the extension name.
+B. Open `.brev/setup.sh` and add your VSCode extensions.
+>To find an extension id, click the settings icon on any extension card and click `Copy Extension ID`. ![Example](https://i.ibb.co/JkNsbkR/Screen-Shot-2021-08-01-at-6-36-57-PM.jpg)
 
-### Terminal Settings
+### 2. Terminal Settings
 
-#### Use **zsh**? Do this 👇 (type `zsh --version` to see if you have zsh installed)
-#### a. Replace `.zshrc` with your personal `.zshrc`.
->If you use zsh, you will have this file! If not, step 3b will apply to you. Type in `cat ~/.zshrc` into your terminal to display the file. If you have any files you want to reference in this script, add them to the `.brev/utils` folder and reference them as `/home/brev/workspace/.brev/utils/<FILENAME>`.
+A. Replace `.zshrc` with your personal `.zshrc`. If you use bash, replace `.bash_profile` instead!
+>Not sure if you have zsh? Type in `zsh --version` to check. To get your personal terminal settings, type in `cat ~/.zshrc` or `cat ~/.bash_profile`. If you have any files you want to reference in this script, add them to the `.brev/utils` folder and reference them as `/home/brev/workspace/.brev/utils/<FILENAME>`.
 
-#### Use **bash** instead? Do this👇
-#### a. Replace `.bash_profile` with your personal `.bash_profile`.
->Most people have this pre-installed! If you use zsh instead, step 3a should apply to you. Type in `cat ~/.bash_profile` into your terminal to display the file. If you have any files you want to reference in this script, add them to the `.brev/utils` folder and reference them as `/home/brev/workspace/.brev/utils/<FILENAME>`.
-
-#### b. Comment out the code under `##### MAKE ZSH DEFAULT #####` in `.brev/setup.sh`.
-> Specifically lines 45 - 51.
+B. If you use bash, comment out the code under `##### MAKE ZSH DEFAULT #####` in `.brev/setup.sh`.
+> Specifically lines 47 - 53.
 
 If there are other tools you'd like to install *globally* (this means they are downloaded everytime you create or join a project), add them in `.brev/setup.sh`. For example, this is where we add zsh!
 
