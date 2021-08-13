@@ -53,6 +53,7 @@ fi
 echo "" >>~/.bash_profile
 cat .bash_profile >>~/.bash_profile
 mv ./.brev/utils ../.brev/
+echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
