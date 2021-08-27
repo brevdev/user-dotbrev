@@ -3,6 +3,8 @@
 ####################################################################################
 ##### Install VSCode extensions, Linux tools or any other global tooling here. #####
 ##### This will be run everytime you create or join a new project.             #####
+#####                                                                          #####
+##### Note: execution of this file happens in the user-dotbrev folder          #####
 ####################################################################################
 
 ##### Essential Linux Installs #####
