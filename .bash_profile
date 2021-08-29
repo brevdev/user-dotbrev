@@ -3,7 +3,8 @@
 ##### If you don't have one, feel free to uncomment any of these recommended settings.   #####
 #####                                                                                    #####
 ##### NOTE: if you are referencing any helper files, add them to .brev/utils and         #####
-##### reference them with the absolute path /home/brev/workspace/.brev/utils/<FILENAME>. #####
+##### reference them with the absolute path                                              #####
+##### /home/brev/workspace/user-dotbrev/.brev/utils/<FILENAME>.                          #####
 ##### See "Enable git autocomplete below" for an example.                                #####
 ##############################################################################################
 
@@ -24,7 +25,7 @@
 # }
 
 ##### Enable Git Autocomplete #####
-# if [ -f /home/brev/workspace/.brev/utils/git-completion.bash ]; then
-#   . /home/brev/workspace/.brev/utils/git-completion.bash
+# if [ -f /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash ]; then
+#   . /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash
 # fi
-# source /home/brev/workspace/.brev/utils/git-prompt.sh
+# source /home/brev/workspace/user-dotbrev/.brev/utils/git-prompt.sh
