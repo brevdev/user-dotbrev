@@ -8,24 +8,13 @@
 ##### See "Enable git autocomplete below" for an example.                                #####
 ##############################################################################################
 
-##### Bash #####
-# alias ll='ls -laghFG'
-# alias cd..='cd ..'
+# Load in the git branch prompt script.
+source /home/brev/workspace/user-dotbrev/.brev/utils/git-prompt.sh
 
-##### Git #####
-# alias push='git pull origin master && git push origin master'
-# alias pull='git pull origin master'
-# alias clone='git clone $1'
-# alias b="git branch"
-# alias s="git status"
-# alias a="git add ."
-# alias drop="git stash && git stash drop"
-# c() {
-#   git commit -m "$1"
-# }
+# git autocomplete
+if [ -f /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash ]; then
+  . /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash
+fi
 
-##### Enable Git Autocomplete #####
-# if [ -f /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash ]; then
-#   . /home/brev/workspace/user-dotbrev/.brev/utils/git-completion.bash
-# fi
-# source /home/brev/workspace/user-dotbrev/.brev/utils/git-prompt.sh
+# modify prompt
+export PS1="\e[33;1m\t \e[37mwetrill \e[0m| \e[36m\w\e[31m\$(__git_ps1)\e[37m\n| => "
