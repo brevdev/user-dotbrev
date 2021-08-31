@@ -22,7 +22,6 @@ A. Replace `.zshrc` with your personal `.zshrc`. If you use bash, replace `.bash
 >Not sure if you have zsh? Type in `zsh --version` to check. To get your personal terminal settings, type in `cat ~/.zshrc` or `cat ~/.bash_profile`. If you have any files you want to reference in this script, add them to the `.brev/utils` folder and reference them as `/home/brev/workspace/.brev/utils/<FILENAME>`.
 
 B. If you use bash, comment out the code under `##### MAKE ZSH DEFAULT #####` in `.brev/setup.sh`.
-> Specifically lines 47 - 53.
 
 If there are other tools you'd like to install *globally* (this means they are downloaded everytime you create or join a project), add them in `.brev/setup.sh`. For example, this is where we add zsh!
 
