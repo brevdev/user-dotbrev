@@ -36,9 +36,9 @@ If you want to adjust these for more custom setups, here's more information on h
 This is our main configuration folder. This is run everytime you create or join a new project. There is also a project specific dot brev with the same structure, which holds software that you can download for each project.
 
 #### `.brev/setup.sh`
-This is the main file that runs on your linux machine, directly after we provision it and before your project is cloned.
+This is the main configuration file that runs on your linux machine, directly after we provision it and before your project is cloned.
 
-You can pre-download VSCode extensions and globally install software like zsh, linux build tools, or create-react-app. Anything that you would globally install on your computer. The working directory when the file is running is user-dotbrev.
+You can pre-download VSCode extensions and globally install software like zsh, linux build tools, or create-react-app. Anything that you would globally install on your computer. The working directory when the file is running is /home/brev/user-dotbrev.
 
 Careful not to place too many software packages in here (like Node v14, Python, or Go), and instead place that in your project's `.brev`. This way different versions of your software will not conflict, and others can clone your environment.
 
