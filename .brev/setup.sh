@@ -56,11 +56,11 @@ echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
-# echo "##### MAKE ZSH DEFAULT #####" >> ./.brev/logs/setup.log
-# echo "" >>~/.bashrc
-# echo "############################" >>~/.bashrc
-# echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
-# echo "############################" >>~/.bashrc
-# echo "" >>~/.bashrc
-# echo "zsh" >>~/.bashrc
-# source ~/.bashrc
+echo "##### MAKE ZSH DEFAULT #####" >> ./.brev/logs/setup.log
+echo "" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "" >>~/.bashrc
+echo "zsh" >>~/.bashrc
+source ~/.bashrc
