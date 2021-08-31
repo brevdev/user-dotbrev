@@ -1,8 +1,8 @@
 # Brev Setup
 
-Whenever you create or join a project, your user `.brev` directory runs, automating the setup of your project.
+Whenever you create or join a project, your user `.brev` directory runs, applying your user settings to each project.
 
-Fork and modify this template to add your own custom user settings. For project specific settings, see the [project `.brev` template repository](https://github.com/brevdev/default-project-dotbrev).
+Fork and modify this template to add your own custom user settings to Brev. For project specific settings, see the [project `.brev` template repository](https://github.com/brevdev/default-project-dotbrev).
 
 ## Setup Steps
 
