@@ -38,7 +38,7 @@ This is our main configuration folder. This is run everytime you create or join 
 #### `.brev/setup.sh`
 This is the main file that runs on your linux machine, directly after we provision it and before your project is cloned.
 
-You can pre-download VSCode extensions and globally install software like zsh, linux build tools, or create-react-app. Anything that you would globally install on your computer.
+You can pre-download VSCode extensions and globally install software like zsh, linux build tools, or create-react-app. Anything that you would globally install on your computer. The working directory when the file is running is user-dotbrev.
 
 Careful not to place too many software packages in here (like Node v14, Python, or Go), and instead place that in your project's `.brev`. This way different versions of your software will not conflict, and others can clone your environment.
 
@@ -50,7 +50,7 @@ This is where we keep any other files that you'd like to include in your `.bash_
 
 #### `.bash_profile` and `.zshrc`
 This should be replaced with your bash profile or your zshrc. We use this to setup aliases, git completion or any other terminal specific settings you have for your terminal.
-We have recommended aliases and git completion if you want to uncomment those lines. Again, any other files you'd like to reference should be in `/home/brev/workspace/.brev/utils/<FILENAME>`.
+We have recommended aliases and git completion if you want to uncomment those lines. Again, any other files you'd like to reference should be in `/home/brev/workspace/user-dotbrev/.brev/utils/<FILENAME>`.
 
 #### `.vscode/settings.json`
 This file is copied into our fork of VSCode so your settings are the same.
