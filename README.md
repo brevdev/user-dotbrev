@@ -42,7 +42,7 @@ You can pre-download VSCode extensions and globally install software like zsh, l
 
 Careful not to place too many software packages in here (like Node v14, Python, or Go), and instead place that in your project's `.brev`. This way different versions of your software will not conflict, and others can clone your environment.
 
-If you need help debugging your setup file, a log file is auto-created when this file runs. It is located at `/home/brev/user-dotbrev/.brev/logs/setup.log`. We highly recommend echo-ing statements into this file when installing new software to know where errors might be located.
+If you need help debugging your setup file, a log file is auto-created when this file runs. It is located at `./.brev/logs/setup.log`. We highly recommend echo-ing statements into this file when installing new software to know where errors might be located.
 
 #### `.brev/logs`
 This is where we keep logs that occur when running the setup script and cloning repositories (such as this one, and your project repository if you are creating or joining a project from git).
