@@ -13,16 +13,16 @@
 ####################################################################################
 
 ##### Essential Linux Installs #####
-echo "##### Essential Linux Installs #####" >> ./.brev/logs/setup.log
+(echo ""; echo "##### Essential Linux Installs #####"; echo "";) >> .brev/logs/setup.log 
 sudo apt-get install -y build-essential
 
 ##### Setting up VSCode defaults #####
-echo "##### Setting up VSCode defaults #####" >> ./.brev/logs/setup.log
+(echo ""; echo "##### Setting up VSCode defaults #####"; echo "";) >> .brev/logs/setup.log 
 mkdir -p /home/brev/.local/share/code-server/User
 cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 
 ##### Your VSCode Extensions #####
-echo "##### Your VSCode Extensions #####" >> ./.brev/logs/setup.log
+(echo ""; echo "##### Your VSCode Extensions #####"; echo "";) >> .brev/logs/setup.log 
 code-server --install-extension vsls-contrib.codetour
 code-server --install-extension ms-azuretools.vscode-docker
 code-server --install-extension mikestead.dotenv
@@ -47,7 +47,7 @@ code-server --install-extension xr0master.webstorm-intellij-darcula-theme
 # code-server --install-extension ryanolsonx.solarized
 
 ##### ZSH #####
-echo "##### ZSH #####" >> ./.brev/logs/setup.log
+(echo ""; echo "##### ZSH #####"; echo "";) >> .brev/logs/setup.log 
 sudo apt-get install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Copying your ZSH Settings
@@ -56,7 +56,7 @@ cat .zshrc >>~/.zshrc
 source ~/.zshrc
 
 ##### BASH #####
-echo "##### BASH #####" >> ./.brev/logs/setup.log
+(echo ""; echo "##### BASH #####"; echo "";) >> .brev/logs/setup.log 
 # Copying your BASH Settings
 if [ ! -f "~/.bash_profile" ]; then
   touch ~/.bash_profile
@@ -68,7 +68,7 @@ echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
-# echo "##### MAKE ZSH DEFAULT #####" >> ./.brev/logs/setup.log
+# (echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";) >> .brev/logs/setup.log 
 # echo "" >>~/.bashrc
 # echo "############################" >>~/.bashrc
 # echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
