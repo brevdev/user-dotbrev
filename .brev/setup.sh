@@ -69,6 +69,10 @@ echo "" >>~/.bashrc
 echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
+asdf
+
+echo "##### AGAIN #####" >>~/.zshrc
+
 ##### MAKE ZSH DEFAULT #####
 # (echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";) >> .brev/logs/setup.log 
 # echo "" >>~/.bashrc
