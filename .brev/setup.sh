@@ -30,7 +30,7 @@ code-server --install-extension ms-azuretools.vscode-docker
 code-server --install-extension mikestead.dotenv
 code-server --install-extension dbaeumer.vscode-eslint
 code-server --install-extension golang.go
-code-server --install-extension compulim.indent4to2
+code-server --install-extension ephoton.indent-switcher
 code-server --install-extension k--kato.intellij-idea-keybindings
 code-server --install-extension davidanson.vscode-markdownlint
 code-server --install-extension pkief.material-icon-theme
