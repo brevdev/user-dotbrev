@@ -54,7 +54,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Copying your ZSH Settings
 echo "" >>~/.zshrc
 cat .zshrc >>~/.zshrc
-source ~/.zshrc
 
 ##### BASH #####
 (echo ""; echo "##### BASH #####"; echo "";) >> .brev/logs/setup.log 
@@ -70,7 +69,7 @@ source ~/.bash_profile
 
 asdf
 
-echo "##### AGAIN #####" >>~/.zshrc
+echo "##### AGAIN #####" >> .brev/logs/setup.log
 
 ##### MAKE ZSH DEFAULT #####
 # (echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";) >> .brev/logs/setup.log 
