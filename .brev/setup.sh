@@ -34,7 +34,6 @@ code-server --install-extension ephoton.indent-switcher
 code-server --install-extension k--kato.intellij-idea-keybindings
 code-server --install-extension davidanson.vscode-markdownlint
 code-server --install-extension pkief.material-icon-theme
-code-server --install-extension ms-vscode-remote.remote-containers
 code-server --install-extension foxundermoon.shell-format
 code-server --install-extension tyriar.sort-lines
 code-server --install-extension xr0master.webstorm-intellij-darcula-theme
