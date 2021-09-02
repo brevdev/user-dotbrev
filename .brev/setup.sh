@@ -19,7 +19,7 @@ set -euo pipefail
 sudo apt-get install -y build-essential
 
 ##### Setting up VSCode defaults #####
-(echo ""; xs echo "##### Setting up VSCode defaults #####"; echo "";) >> .brev/logs/setup.log 
+(echo ""; echo "##### Setting up VSCode defaults #####"; echo "";) >> .brev/logs/setup.log 
 mkdir -p /home/brev/.local/share/code-server/User
 cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 
