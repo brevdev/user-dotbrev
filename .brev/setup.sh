@@ -73,3 +73,6 @@ source ~/.bash_profile
 # echo "" >>~/.bashrc
 # echo "zsh" >>~/.bashrc
 # source ~/.bashrc
+
+##### CUSTOM #####
+git config --global pull.ff only
