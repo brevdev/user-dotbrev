@@ -53,12 +53,4 @@ echo "" >>~/.bashrc
 echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
-##### MAKE ZSH DEFAULT #####
-(echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";)
-echo "" >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "" >>~/.bashrc
-echo "zsh" >>~/.bashrc
-source ~/.bashrc
+sudo chsh -s /usr/bin/zsh brev
