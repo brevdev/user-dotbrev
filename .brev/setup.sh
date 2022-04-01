@@ -6,7 +6,7 @@ set -euo pipefail
 ##### Install VSCode extensions, Linux tools or any other global tooling here. #####
 ##### This will be run everytime you create or join a new project.             #####
 #####                                                                          #####
-##### Note:                                                                    ##### 
+##### Note:                                                                    #####
 ##### The working directory is /home/brev/user-dotbrev. Execution of this file #####
 ##### happens at this level.                                                   #####
 ####################################################################################
@@ -36,7 +36,6 @@ cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 ##### ZSH #####
 (echo ""; echo "##### ZSH #####"; echo "";)
 sudo apt-get install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Copying your ZSH Settings
 echo "" >>~/.zshrc
 cat .zshrc >>~/.zshrc
