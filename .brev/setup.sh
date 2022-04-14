@@ -18,7 +18,7 @@ sudo apt-get install -y build-essential
 ##### Setting up VSCode defaults #####
 (echo ""; echo "##### Setting up VSCode defaults #####"; echo "";)
 mkdir -p /home/brev/.local/share/code-server/User
-cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
+cp /home/brev/workspace/user-dotbrev/.vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 
 ##### Your VSCode Extensions #####
 (echo ""; echo "##### Your VSCode Extensions #####"; echo "";)
