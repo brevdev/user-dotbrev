@@ -23,7 +23,7 @@ cp /home/brev/workspace/user-dotbrev/.vscode/settings.json /home/brev/.local/sha
 ##### Your VSCode Extensions #####
 (echo ""; echo "##### Your VSCode Extensions #####"; echo "";)
 code-server --install-extension vsls-contrib.codetour
-code-server --install-extension ms-azuretools.vscode-docker
+# code-server --install-extension ms-azuretools.vscode-docker
 code-server --install-extension mikestead.dotenv
 code-server --install-extension dbaeumer.vscode-eslint
 # code-server --install-extension golang.go
@@ -65,14 +65,14 @@ echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
 ##### MAKE ZSH DEFAULT #####
-# (echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";)
-# echo "" >>~/.bashrc
-# echo "############################" >>~/.bashrc
-# echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
-# echo "############################" >>~/.bashrc
-# echo "" >>~/.bashrc
-# echo "zsh" >>~/.bashrc
-# source ~/.bashrc
+(echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";)
+echo "" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "" >>~/.bashrc
+echo "zsh" >>~/.bashrc
+source ~/.bashrc
 
 ##### CUSTOM #####
 git config --global pull.ff only
