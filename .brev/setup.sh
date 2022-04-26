@@ -11,10 +11,6 @@ set -eo pipefail
 ##### happens at this level.                                                   #####
 ####################################################################################
 
-##### Essential Linux Installs #####
-(echo ""; echo "##### Essential Linux Installs #####"; echo "";)
-sudo apt-get install -y build-essential
-
 ##### Setting up VSCode defaults #####
 (echo ""; echo "##### Setting up VSCode defaults #####"; echo "";)
 mkdir -p /home/brev/.local/share/code-server/User
