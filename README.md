@@ -13,7 +13,7 @@ B. If you use bash, comment out the code under `##### MAKE ZSH DEFAULT #####` in
 
 If there are other tools you'd like to install *globally* (this means they are downloaded everytime you create or join a project), add them in `.brev/setup.sh`. For example, this is where we add zsh!
 
-**Done! Happy coding 🎉 **
+**Done! Happy coding** 🎉
 
 ### Optional: VSCode Settings for Web browser
 This is only for getting your VSCode settings while coding in the browser (accessible through our console). This is not necessary for coding using your local VSCode.
