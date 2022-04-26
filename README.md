@@ -1,8 +1,8 @@
-# Brev Setup
+# Personal Settings for Brev.dev
 
-Whenever you create or join a project, your user `.brev` directory runs, applying your user settings to each project.
+Whenever you create or join a project, your user `.brev` directory runs, applying your personal user settings to each project. This includes terminal aliases, VSCode extensions, PS1 modifications etc.
 
-Fork and modify this template to add your own custom user settings to Brev. For project specific settings, see the [project `.brev` template repository](https://github.com/brevdev/default-project-dotbrev).
+Start by forking this repository, then follow the instructions below to modify this template to add your own custom user settings to Brev.dev. Remember to keep user specific settings here, for project specific settings see the [project `.brev` template repository](https://github.com/brevdev/default-project-dotbrev).
 
 ## Setup Steps
 
