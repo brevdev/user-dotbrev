@@ -14,11 +14,22 @@ set -eo pipefail
 ##### Setting up VSCode defaults #####
 (echo ""; echo "##### Setting up VSCode defaults #####"; echo "";)
 mkdir -p /home/brev/.local/share/code-server/User
-cp .vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
+cp /home/brev/workspace/user-dotbrev/.vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 
 ##### Your VSCode Extensions #####
 (echo ""; echo "##### Your VSCode Extensions #####"; echo "";)
-# code-server --install-extension <EXTENSION_ID>
+code-server --install-extension vsls-contrib.codetour
+# code-server --install-extension ms-azuretools.vscode-docker
+code-server --install-extension mikestead.dotenv
+code-server --install-extension dbaeumer.vscode-eslint
+# code-server --install-extension golang.go
+code-server --install-extension ephoton.indent-switcher
+code-server --install-extension k--kato.intellij-idea-keybindings
+code-server --install-extension davidanson.vscode-markdownlint
+# code-server --install-extension pkief.material-icon-theme
+# code-server --install-extension foxundermoon.shell-format
+code-server --install-extension tyriar.sort-lines
+code-server --install-extension xr0master.webstorm-intellij-darcula-theme
 
 ##### Recommended VSCode Extensions #####
 # code-server --install-extension esbenp.prettier-vscode
@@ -49,4 +60,17 @@ echo "" >>~/.bashrc
 echo "source ~/.bash_profile" >>~/.bashrc
 source ~/.bash_profile
 
+##### MAKE ZSH DEFAULT #####
+(echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";)
+echo "" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
+echo "############################" >>~/.bashrc
+echo "" >>~/.bashrc
+echo "zsh" >>~/.bashrc
+source ~/.bashrc
+
 sudo chsh -s /usr/bin/zsh brev
+
+##### CUSTOM #####
+git config --global pull.ff only
