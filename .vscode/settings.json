@@ -1,56 +1,13 @@
 {
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.detectIndentation": false,
   "editor.rulers": [
     100
   ],
   "editor.tabSize": 2,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": false
+    "source.organizeImports": true
   },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/*.pyc": {
-      "when": "$(basename).py"
-    },
-    "**/__pycache__": true
-  },
-  "typescript.format.semicolons": "insert",
-  "terminal.integrated.tabs.enabled": true,
-  "workbench.colorCustomizations": {
-    "terminal.foreground": "#bbbbbb",
-    "terminal.background": "#000000",
-    "terminal.ansiBlack": "#000000",
-    "terminal.ansiBlue": "#0000bb",
-    "terminal.ansiCyan": "#00bbbb",
-    "terminal.ansiGreen": "#00bb00",
-    "terminal.ansiMagenta": "#bb00bb",
-    "terminal.ansiRed": "#bb0000",
-    "terminal.ansiWhite": "#bbbbbb",
-    "terminal.ansiYellow": "#bbbb00",
-    "terminal.ansiBrightBlack": "#555555",
-    "terminal.ansiBrightBlue": "#5555ff",
-    "terminal.ansiBrightCyan": "#55ffff",
-    "terminal.ansiBrightGreen": "#55ff55",
-    "terminal.ansiBrightMagenta": "#ff55ff",
-    "terminal.ansiBrightRed": "#ff5555",
-    "terminal.ansiBrightWhite": "#ffffff",
-    "terminal.ansiBrightYellow": "#ffff55",
-    "terminal.selectionBackground": "#b5d5ff",
-    "terminalCursor.foreground": "#bbbbbb"
-  },
-  "terminal.external.osxExec": "iTerm.app",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Webstorm IntelliJ Darcula Theme",
+  "workbench.colorTheme": "Visual Studio Dark"
 }
