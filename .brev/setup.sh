@@ -7,14 +7,14 @@ set -eo pipefail
 ##### This will be run everytime you create or join a new project.             #####
 #####                                                                          #####
 ##### Note:                                                                    ##### 
-##### The working directory is ~/user-dotbrev. Execution of this file #####
+##### The working directory is /home/brev/user-dotbrev. Execution of this file #####
 ##### happens at this level.                                                   #####
 ####################################################################################
 
 ##### Setting up VSCode defaults #####
 (echo ""; echo "##### Setting up VSCode defaults #####"; echo "";)
-mkdir -p ~/.local/share/code-server/User
-cp ~/workspace/user-dotbrev/.vscode/settings.json ~/.local/share/code-server/User/settings.json
+mkdir -p /home/brev/.local/share/code-server/User
+cp /home/brev/workspace/user-dotbrev/.vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
 
 ##### Your VSCode Extensions #####
 (echo ""; echo "##### Your VSCode Extensions #####"; echo "";)
