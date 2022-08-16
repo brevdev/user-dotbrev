@@ -6,8 +6,12 @@ set -eo pipefail
 sudo apt update && sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
+## upate pam to not need password to change shell
+sudo sed -i 's/^auth sufficient pam_shells.so/#auth sufficient pam_shells.so/' /etc/pam.d/chsh
+
 ## update /etc/passwd to have the user ubuntu's shell be zsh
-sudo sed -i 's/\/bin\/bash/\/bin\/zsh/g' /etc/passwd
+chsh -s /bin/zsh ubuntu
+# sudo sed -i 's/\/bin\/bash/\/bin\/zsh/g' /etc/passwd
 
 # add `"terminal.integrated.defaultProfile.linux": "zsh"` to .vscode-server/data/Machine/settings.json
 python3 - <<EOF
@@ -44,3 +48,7 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 
 ## set git editor to vim
 git config --global core.editor vim
+
+# untar brev.tar.gz to brev
+
+tar -xvf brev.tar.gz
