@@ -6,8 +6,8 @@ set -eo pipefail
 sudo apt update && sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
-# configure zsh as default shell without getting prompted for password
-sudo usermod -s /bin/zsh $USER
+## update /etc/passwd to have the user ubuntu's shell be zsh
+sudo sed -i 's/\/bin\/bash/\/bin\/zsh/g' /etc/passwd
 
 # add `"terminal.integrated.defaultProfile.linux": "zsh"` to .vscode-server/data/Machine/settings.json
 python3 - <<EOF
