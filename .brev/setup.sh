@@ -2,63 +2,45 @@
 
 set -eo pipefail
 
-####################################################################################
-##### Install VSCode extensions, Linux tools or any other global tooling here. #####
-##### This will be run everytime you create or join a new project.             #####
-#####                                                                          #####
-##### Note:                                                                    ##### 
-##### The working directory is /home/brev/user-dotbrev. Execution of this file #####
-##### happens at this level.                                                   #####
-####################################################################################
+## install and configure oh-my-zsh headless for ubuntu 20.04
+sudo apt update && sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
-##### Setting up VSCode defaults #####
-(echo ""; echo "##### Setting up VSCode defaults #####"; echo "";)
-mkdir -p /home/brev/.local/share/code-server/User
-cp /home/brev/workspace/user-dotbrev/.vscode/settings.json /home/brev/.local/share/code-server/User/settings.json
+# set default shell to zsh
+sudo chsh -s /bin/zsh $USER
 
-##### Your VSCode Extensions #####
-(echo ""; echo "##### Your VSCode Extensions #####"; echo "";)
+# add `"terminal.integrated.defaultProfile.linux": "zsh"` to .vscode-server/data/Machine/settings.json
+python3 - <<EOF
+import json
+import os
+def create_if_not_exists(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
 
-##### Recommended VSCode Extensions #####
-# code-server --install-extension esbenp.prettier-vscode
-# code-server --install-extension eamodio.gitlens
-# code-server --install-extension ms-azuretools.vscode-docker
-# code-server --install-extension davidanson.vscode-markdownlint
-# code-server --install-extension golang.go
-# code-server --install-extension tyriar.sort-lines
-# code-server --install-extension ryanolsonx.solarized
+def create_file_if_not_exists(path):
+    if not os.path.exists(path):
+        open(path, 'a').close()
 
-##### ZSH #####
-(echo ""; echo "##### ZSH #####"; echo "";)
-sudo apt-get install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-# Copying your ZSH Settings
-echo "" >>~/.zshrc
-cat .zshrc >>~/.zshrc
+create_if_not_exists('.vscode-server')
+create_if_not_exists('.vscode-server/data')
+create_if_not_exists('.vscode-server/data/Machine')
+create_file_if_not_exists('.vscode-server/data/Machine/settings.json')
 
-##### BASH #####
-(echo ""; echo "##### BASH #####"; echo "";)
-# Copying your BASH Settings
-if [ ! -f "~/.bash_profile" ]; then
-  touch ~/.bash_profile
-fi
-echo "" >>~/.bash_profile
-cat .bash_profile >>~/.bash_profile
-echo "" >>~/.bashrc
-echo "source ~/.bash_profile" >>~/.bashrc
-source ~/.bash_profile
+with open('.vscode-server/data/Machine/settings.json', 'r') as f:
+    try:
+        data = json.load(f)
+    except:
+        data = {}
+    data['terminal.integrated.defaultProfile.linux'] = 'zsh'
+with open('.vscode-server/data/Machine/settings.json', 'w') as f:
+    json.dump(data, f, indent=2)
+EOF
 
-##### MAKE ZSH DEFAULT #####
-(echo ""; echo "##### MAKE ZSH DEFAULT #####"; echo "";)
-echo "" >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "##### MAKE ZSH DEFAULT #####" >>~/.bashrc
-echo "############################" >>~/.bashrc
-echo "" >>~/.bashrc
-echo "zsh" >>~/.bashrc
-source ~/.bashrc
+## install and configure vim
+sudo apt update && sudo apt install -y vim
 
-sudo chsh -s /usr/bin/zsh brev
+## set default editor to vim
+sudo update-alternatives --set editor /usr/bin/vim.basic
 
-##### CUSTOM #####
-(echo ""; echo "##### CUSTOM #####"; echo "";)
+## set git editor to vim
+git config --global core.editor vim
