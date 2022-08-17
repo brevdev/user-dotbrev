@@ -43,3 +43,4 @@ sudo apt update && sudo apt install -y vim
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
 ## set git editor to vim
+git config --global core.editor vim
