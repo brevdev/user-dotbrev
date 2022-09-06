@@ -4,10 +4,6 @@ set -eo pipefail
 
 ## install and configure oh-my-zsh headless for ubuntu 20.04
 sudo apt update && sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-
-# set default shell to zsh
-sudo chsh -s /bin/zsh $USER
 
 # add `"terminal.integrated.defaultProfile.linux": "zsh"` to .vscode-server/data/Machine/settings.json
 python3 - <<EOF
@@ -37,10 +33,36 @@ with open('.vscode-server/data/Machine/settings.json', 'w') as f:
 EOF
 
 ## install and configure vim
-sudo apt update && sudo apt install -y vim
+sudo apt update && sudo apt install -y vim emacs
 
 ## set default editor to vim
 sudo update-alternatives --set editor /usr/bin/vim.basic
 
 ## set git editor to vim
 git config --global core.editor vim
+
+sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe"
+sudo apt-get update && sudo apt-get install -y git zip make build-essential
+
+### docker ###
+# https://docs.docker.com/engine/install/ubuntu/
+sudo apt-get install -y \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --yes --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+# https://docs.docker.com/engine/install/linux-postinstall/
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+sudo usermod -aG docker $USER
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended | true
+# set default shell to zsh
+sudo chsh -s /bin/zsh $USER
