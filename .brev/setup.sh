@@ -63,6 +63,10 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
 
+# Legacy Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended | true
 # set default shell to zsh
 sudo chsh -s /bin/zsh $USER
