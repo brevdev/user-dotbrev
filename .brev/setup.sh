@@ -41,6 +41,10 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 ## set git editor to vim
 git config --global core.editor vim
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended | true
+# set default shell to zsh
+sudo chsh -s /bin/zsh $USER
+
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe"
 sudo apt-get update && sudo apt-get install -y git zip make build-essential
 
@@ -66,7 +70,3 @@ sudo usermod -aG docker $USER
 # Legacy Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended | true
-# set default shell to zsh
-sudo chsh -s /bin/zsh $USER
