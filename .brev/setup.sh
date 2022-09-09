@@ -4,6 +4,9 @@ set -eo pipefail
 
 ## install and configure oh-my-zsh headless for ubuntu 20.04
 sudo apt update && sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended || true
+# set default shell to zsh
+sudo chsh -s /bin/zsh $USER
 
 # add `"terminal.integrated.defaultProfile.linux": "zsh"` to .vscode-server/data/Machine/settings.json
 python3 - <<EOF
@@ -40,10 +43,6 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 
 ## set git editor to vim
 git config --global core.editor vim
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended | true
-# set default shell to zsh
-sudo chsh -s /bin/zsh $USER
 
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe"
 sudo apt-get update && sudo apt-get install -y git zip make build-essential
