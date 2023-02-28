@@ -69,3 +69,25 @@ sudo usermod -aG docker $USER
 # Legacy Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+##### Add Env Name to Terminal Prompt #####
+# Define a function called getName
+function getName {
+  # Use jq to extract the "workspaceId" key from the "/etc/meta/workspace.json" file
+  workspaceId=$(jq -r '.workspaceId' /etc/meta/workspace.json)
+
+  # Use brev ls to list the dev environments and grep for the row that contains the workspace ID
+  row=$(brev ls | grep "$workspaceId")
+
+  # Extract the "NAME" column from the row using awk
+  name=$(echo "$row" | awk '{print $1}')
+
+  # Print the name
+  echo "$name"
+}
+
+# Get the name using the getName function
+name=$(getName)
+
+# Replace the PROMPT line in robbyrussell.zsh-theme with a new prompt that includes the name
+sed -i "s/^PROMPT=.*/PROMPT=\"%{\$fg_bold[cyan]%}$name %(?:%{\$fg_bold[green]%}➜ :%{\$fg_bold[red]%}➜ )\"/" ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
